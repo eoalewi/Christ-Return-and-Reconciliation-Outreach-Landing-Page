@@ -11,12 +11,17 @@ function Hero() {
     }
   };
 
+  const scrollToJoin = () => {
+    const section = document.getElementById("join");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section style={styles.hero}>
-      {/* Overlay */}
       <div style={styles.overlay}></div>
 
-      {/* Content */}
       <div style={styles.content}>
         <motion.h1
           style={styles.heading}
@@ -36,7 +41,6 @@ function Hero() {
         </motion.p>
 
         <motion.div style={styles.buttons}>
-          {/* JOIN BUTTON */}
           <button
             style={{
               ...styles.button,
@@ -44,11 +48,11 @@ function Hero() {
             }}
             onMouseEnter={() => setHovered("join")}
             onMouseLeave={() => setHovered(null)}
+            onClick={scrollToJoin} // ⬅ Scroll to JoinMission
           >
             Join the Mission
           </button>
 
-          {/* SUPPORT BUTTON */}
           <button
             style={{
               ...styles.button,
@@ -56,7 +60,7 @@ function Hero() {
             }}
             onMouseEnter={() => setHovered("support")}
             onMouseLeave={() => setHovered(null)}
-            onClick={scrollToDonate}
+            onClick={scrollToDonate} // ⬅ Scroll to Donate
           >
             Support the Work
           </button>
@@ -113,7 +117,6 @@ const styles = {
     gap: "15px"
   },
 
-  // 👇 DEFAULT BUTTON (NO HIGHLIGHT)
   button: {
     padding: "14px 28px",
     background: "transparent",
@@ -126,7 +129,6 @@ const styles = {
     transition: "0.3s"
   },
 
-  // 👇 HOVER STATE
   buttonHover: {
     background: "#f59e0b",
     border: "2px solid #f59e0b",

@@ -3,10 +3,8 @@ import { motion } from "framer-motion";
 function Donate() {
   return (
     <section id="donate" style={styles.section}>
-      {/* Overlay */}
       <div style={styles.overlay}></div>
 
-      {/* Content */}
       <div style={styles.content}>
         <motion.h2
           style={styles.heading}
@@ -28,7 +26,6 @@ function Donate() {
           lives are transformed and hope is restored.
         </motion.p>
 
-        {/* Impact + Donation Cards */}
         <motion.div
           style={styles.grid}
           initial={{ opacity: 0 }}
@@ -59,13 +56,11 @@ function Donate() {
             </p>
           </div>
 
-          {/* ✅ Donate Card (Integrated nicely) */}
           <div style={styles.cardHighlight}>
             <h3>💳 Give / Donate</h3>
             <p><strong>Bank:</strong> Access Bank</p>
             <p><strong>Account No:</strong> 82845757839</p>
             <p><strong>Name:</strong> Jonathan Owagbayegun</p>
-
             <p style={styles.smallText}>
               Your giving fuels this mission and transforms lives.
             </p>
@@ -84,12 +79,13 @@ const styles = {
   section: {
     position: "relative",
     padding: "100px 20px",
+    color: "white",
+    textAlign: "center",
     backgroundImage:
       "url('https://stjovitaandjoviana.org/wp-content/uploads/2024/10/slide_4.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    color: "white",
-    textAlign: "center"
+    backgroundAttachment: "fixed" // 👈 Parallax effect
   },
 
   overlay: {
@@ -136,12 +132,11 @@ const styles = {
     padding: "25px",
     borderRadius: "12px",
     backdropFilter: "blur(6px)",
-    border: "1px solid rgba(255,255,255,0.2)",
-    transition: "0.3s"
+    border: "1px solid rgba(255,255,255,0.2)"
   },
 
   cardHighlight: {
-    background: "rgba(245, 158, 11, 0.2)", // gold highlight
+    background: "rgba(245, 158, 11, 0.2)",
     padding: "25px",
     borderRadius: "12px",
     backdropFilter: "blur(6px)",

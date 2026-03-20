@@ -8,6 +8,7 @@ import Blogs from './components/sections/Blogs';
 // import Sermons from './components/sections/Sermons';
 import Donate from './components/sections/Donate';
 import Contact from './components/sections/Contact';
+import JoinMission from "./components/sections/JoinMission";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Hero />
       <About />
       <Blogs />
-      {/* <Sermons /> */}
+<JoinMission />
       <Donate />
       <Contact />
       <Footer />

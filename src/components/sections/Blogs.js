@@ -161,10 +161,14 @@ Stay connected, grow together, and build strong relationships in Christ.`}
 
 function Blogs() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   const toggleReadMore = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
+
+  // Determine which blogs to show: either first 4 or all
+  const displayedBlogs = showAll ? blogs : blogs.slice(0, 4);
 
   return (
     <section id="blogs" style={styles.section}>
@@ -188,7 +192,7 @@ function Blogs() {
         </motion.p>
 
         <div style={styles.grid}>
-          {blogs.map((blog, index) => (
+          {displayedBlogs.map((blog, index) => (
             <motion.div
               key={index}
               style={styles.card}
@@ -197,7 +201,6 @@ function Blogs() {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              {/* Image */}
               <div style={styles.imageWrapper}>
                 <img
                   src={blog.image}
@@ -206,12 +209,10 @@ function Blogs() {
                 />
               </div>
 
-              {/* Content */}
               <div style={styles.content}>
                 <h3 style={styles.title}>{blog.title}</h3>
                 <p style={styles.desc}>{blog.desc}</p>
 
-                {/* Animated Read More */}
                 <motion.div
                   initial={false}
                   animate={{
@@ -233,11 +234,24 @@ function Blogs() {
             </motion.div>
           ))}
         </div>
+
+        {/* Show More / Show Less Button */}
+        {blogs.length > 4 && (
+          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <button
+              style={{ ...styles.button, padding: "14px 28px" }}
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? "Show Less Blogs ↑" : "View More Blogs →"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
+// Your styles object remains the same
 const styles = {
   section: {
     background: "#f9fafb",
@@ -331,8 +345,3 @@ cardHover: {
 };
 
 export default Blogs;
-
-
-
-
-

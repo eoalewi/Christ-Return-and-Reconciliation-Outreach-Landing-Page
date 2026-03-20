@@ -3,20 +3,16 @@ function Navbar() {
     <nav style={styles.nav}>
       <div style={styles.brand}>
         <img
-          src="http://res.cloudinary.com/dwhvilwc3/image/upload/v1773966370/bd83ek6kmepol42tgywl.png"
+          src="http://res.cloudinary.com/dwhvilwc3/image/upload/v1773995600/hsixnc6pina9sgtaavs5.png"
           alt="Missionary Logo"
           style={styles.logo}
         />
-        <h2 style={styles.brandText}>
-          Christ Return and Reconciliation Outreach Ministries
-        </h2>
       </div>
 
       <div style={styles.links}>
         <a href="#" style={styles.link}>Home</a>
         <a href="#about" style={styles.link}>About</a>
         <a href="#blogs" style={styles.link}>Blog</a>
-        {/* <a href="#sermons" style={styles.link}>Sermons</a> */}
         <a href="#contact" style={styles.link}>Contact</a>
       </div>
     </nav>
@@ -28,34 +24,29 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "15px 60px",
+    padding: "0 60px",
     background: "var(--primary)",
-    color: "white"
+    color: "white",
+    height: "75px",        // fixed navbar height
+    boxSizing: "border-box"
   },
 
   brand: {
     display: "flex",
-    alignItems: "center",
-    gap: "12px" // space between logo & text
+    alignItems: "center"
   },
 
   logo: {
-    height: "45px",
-    width: "45px",
+    height: "200px",        // large but fits in navbar
+    width: "auto",         // keeps aspect ratio
     objectFit: "contain",
     borderRadius: "6px"
   },
 
-  brandText: {
-    fontSize: "16px",
-    fontWeight: "600",
-    maxWidth: "260px", // prevents overflow
-    lineHeight: "1.2"
-  },
-
   links: {
     display: "flex",
-    gap: "30px"
+    gap: "30px",
+    alignItems: "center"
   },
 
   link: {
