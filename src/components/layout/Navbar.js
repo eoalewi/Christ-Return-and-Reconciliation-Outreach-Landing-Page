@@ -52,7 +52,7 @@ function Navbar() {
           zIndex: 9,
         }}
       >
-        <a href="#" style={styles.link}>Home</a>
+        <a href="#home" style={styles.link}>Home</a>
         <a href="#about" style={styles.link}>About</a>
         <a href="#blogs" style={styles.link}>Blog</a>
         <a href="#contact" style={styles.link}>Contact</a>
