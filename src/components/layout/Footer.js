@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>© 2026 Missionary Church</p>
+      <p>© 2026 Christ Return and Reconciliation Outreach</p>
     </footer>
   );
 }
