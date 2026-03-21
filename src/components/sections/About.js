@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 function About() {
-  // ✅ Count-up logic
+  // Count-up logic
   const [counts, setCounts] = useState({
     souls: 0,
     missions: 0,
@@ -42,7 +42,7 @@ function About() {
 
   return (
     <section id="about" style={styles.section}>
-      {/* 🔥 PARALLAX BACKGROUND */}
+      {/* PARALLAX BACKGROUND */}
       <div style={styles.parallax}></div>
 
       <div className="container" style={styles.content}>
@@ -60,7 +60,7 @@ function About() {
           sinners with the Gospel and winning souls into the Kingdom of Christ.
         </motion.p>
 
-        {/* ✅ STATS */}
+        {/* STATS */}
         <div style={styles.stats}>
           <div style={styles.statBox}>
             <h3>{counts.souls}+</h3>
@@ -78,7 +78,7 @@ function About() {
           </div>
         </div>
 
-        {/* ✅ CARDS */}
+        {/* CARDS */}
         <div style={styles.grid}>
           <motion.div style={styles.card} whileHover={{ y: -10 }}>
             <h3>🌍 Our Vision</h3>
@@ -106,7 +106,7 @@ function About() {
           </motion.div>
         </div>
 
-        {/* ✅ TIMELINE */}
+        {/* TIMELINE */}
         <div style={styles.timeline}>
           <h3 style={styles.timelineTitle}>Our Journey</h3>
 
@@ -143,7 +143,7 @@ const styles = {
     overflow: "hidden"
   },
 
-  /* 🔥 PARALLAX */
+  /* PARALLAX */
   parallax: {
     position: "absolute",
     top: 0,
@@ -176,7 +176,7 @@ const styles = {
     color: "#e5e7eb"
   },
 
-  /* ✅ STATS */
+  /* STATS */
   stats: {
     display: "flex",
     justifyContent: "center",
@@ -192,7 +192,7 @@ const styles = {
     borderRadius: "10px"
   },
 
-  /* ✅ CARDS */
+  /* CARDS */
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -207,7 +207,7 @@ const styles = {
     backdropFilter: "blur(6px)"
   },
 
-  /* ✅ TIMELINE */
+  /* TIMELINE */
   timeline: {
     marginTop: "80px",
     textAlign: "left",

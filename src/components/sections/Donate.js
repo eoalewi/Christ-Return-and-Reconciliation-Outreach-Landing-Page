@@ -85,7 +85,7 @@ const styles = {
       "url('https://stjovitaandjoviana.org/wp-content/uploads/2024/10/slide_4.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundAttachment: "fixed" // 👈 Parallax effect
+    backgroundAttachment: "fixed" // Parallax effect
   },
 
   overlay: {
